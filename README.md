@@ -4,6 +4,13 @@ You can use this image as it is, or you can extend it and add configuration file
 
 build_nginx-proxy_ubuntu-bionic.sh - is the complete example of build chain for nginx proxy on ubuntu bionic.
 
+## Steps to get working nginx-proxy docker image
+1. git clone git@github.com:vagabondan/nginx-proxy.git
+2. cd nginx-proxy
+3. git submodule init
+4. git submodule update
+5. ./build_nginx-proxy_ubuntu-bionic.sh
+
 ## Automatic configuration ##
 
 This image uses [docker-gen](https://github.com/jwilder/docker-gen) to dynamically generate Nginx configuration files
