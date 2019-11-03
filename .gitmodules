@@ -1,0 +1,18 @@
+[submodule "docker-base"]
+	path = docker-base
+	url = git@github.com:tozd/docker-base.git
+[submodule "docker-nginx"]
+	path = docker-nginx
+	url = git@github.com:tozd/docker-nginx.git
+[submodule "docker-nginx-cron"]
+	path = docker-nginx-cron
+	url = git@github.com:tozd/docker-nginx-cron.git
+[submodule "docker-nginx-mailer"]
+	path = docker-nginx-mailer
+	url = git@github.com:tozd/docker-nginx-mailer.git
+[submodule "docker-nginx-proxy"]
+	path = docker-nginx-proxy
+	url = git@github.com:tozd/docker-nginx-proxy.git
+[submodule "docker-runit"]
+	path = docker-runit
+	url = git@github.com:tozd/docker-runit.git
