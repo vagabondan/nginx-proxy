@@ -2,6 +2,8 @@ Image providing a reverse-proxy using [Nginx](http://nginx.org) HTTP server with
 
 You can use this image as it is, or you can extend it and add configuration files for your virtual hosts.
 
+build_nginx-proxy_ubuntu-bionic.sh - is the compete example of build chain for nginx proxy on ubuntu bionic.
+
 ## Automatic configuration ##
 
 This image uses [docker-gen](https://github.com/jwilder/docker-gen) to dynamically generate Nginx configuration files
