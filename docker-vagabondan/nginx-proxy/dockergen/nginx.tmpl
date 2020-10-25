@@ -1,3 +1,5 @@
+# Based on https://github.com/nginx-proxy/nginx-proxy/blob/master/nginx.tmpl
+
 {{ $CurrentContainer := where $ "ID" .Docker.CurrentContainerID | first }}
 
 {{ $external_http_port := coalesce $.Env.HTTP_PORT "80" }}
