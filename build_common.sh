@@ -6,5 +6,5 @@ os=${2:-ubuntu-bionic}
 img_dir="docker-${img}"
 dockerfile="${os}.dockerfile"
 
-docker build -f ${img_dir}/${dockerfile} -t tozd/${img}:${os} ${img_dir}
+docker build -f ${img_dir}/${dockerfile} -t ${img}:${os} ${img_dir}
 

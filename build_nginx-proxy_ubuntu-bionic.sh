@@ -1,7 +1,7 @@
 #!/bin/bash
 
 os="ubuntu-bionic"
-images="base runit nginx nginx-mailer nginx-cron nginx-proxy"
+images="tozd/base tozd/runit tozd/nginx tozd/nginx-mailer tozd/nginx-cron vagabondan/nginx-proxy"
 
 for img in $images 
 do
