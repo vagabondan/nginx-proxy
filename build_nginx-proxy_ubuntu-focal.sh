@@ -1,6 +1,6 @@
 #!/bin/bash
 
-os="ubuntu-bionic"
+os="ubuntu-focal"
 target_image="vagabondan/nginx-proxy"
 images="tozd/base tozd/runit tozd/nginx tozd/nginx-mailer tozd/nginx-cron ${target_image}"
 
@@ -12,4 +12,4 @@ do
   ./build_common.sh $img $os
 done
 
-docker push ${target_image}
+docker push ${target_image}:${os}
