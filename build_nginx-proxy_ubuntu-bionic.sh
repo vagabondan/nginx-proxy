@@ -1,6 +1,6 @@
 #!/bin/bash
 
-os="ubuntu-focal"
+os="ubuntu-bionic"
 target_image="vagabondan/nginx-proxy"
 images="tozd/base tozd/runit tozd/nginx tozd/nginx-mailer tozd/nginx-cron ${target_image}"
 

@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  proxy:
+    image: vagabondan/nginx-proxy:ubuntu-bionic
+    container_name: proxy-main
+    restart: unless-stopped
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./data/vhost.d:/etc/nginx/vhost.d:ro
+      - ./data/ssl:/ssl
+      - ./data/sites:/etc/nginx/sites-volume
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./data/logs/nginx:/var/log/nginx
+      - ./data/logs/dnsmasq:/var/log/dnsmasq
+      - ./data/logs/dockergen:/var/log/dockergen
+    networks:
+      - proxy-tier
+    environment:
+      - LETSENCRYPT_EMAIL=someemail@email.org
+
+networks:
+  proxy-tier:
+    external:
+      name: proxy-tier

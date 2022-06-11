@@ -23,6 +23,15 @@ RUN apt-get update -q -q && \
  mkdir -p /ssl/letsencrypt && \
  apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache ~/.npm
 
+RUN echo 'deb https://nginx.org/packages/ubuntu/ bionic nginx' >> /etc/apt/sources.list.d/nginx.list && \
+echo 'deb-src https://nginx.org/packages/ubuntu/ bionic nginx' >> /etc/apt/sources.list.d/nginx.list && \
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ABF5BD827BD9BF62 && \
+apt update -q -q && \
+apt upgrade -y
+
+RUN apt-get --yes -o Dpkg::Options::="--force-confold" install nginx && \
+apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache ~/.npm
+
 COPY ./etc /etc
 COPY ./dockergen /dockergen
 COPY ./letsencrypt-bionic /letsencrypt
